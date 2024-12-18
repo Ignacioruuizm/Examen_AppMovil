@@ -20,6 +20,7 @@ https://svera00.github.io/SnackDashPage/
 Usuario:admin
 Pass:1234
 ![image](https://github.com/user-attachments/assets/510e6313-f7bf-47d7-9cf5-99594508e963)
+![image](https://github.com/user-attachments/assets/8326cdd8-b245-405d-a459-96914f549b75)
 
 Contacto 📬
 Para dudas o comentarios, contáctanos en:
