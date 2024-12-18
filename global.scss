@@ -1,0 +1,331 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the theme object.
+$app-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$azure-palette,
+    tertiary: mat.$blue-palette,
+  ),
+  density: (
+    scale: 0,
+  )
+));
+body {
+  color-scheme: dark; /* Indica al sistema que estás en modo oscuro */
+}
+:root {
+  --ion-color-primary: #222428;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-background-color: #121212;
+  --ion-text-color: #ffffff;
+  --ion-toolbar-background-color: #1c1c1c;
+  --ion-toolbar-color: #ffffff;
+}
+ion-header {
+  ion-toolbar, ion-item {
+    --background: #000000;
+    padding: 4px 10px;
+    
+    
+  }
+
+  ion-toolbar {
+    .bordered {
+      --border-radius: 10px;}
+  }
+
+  ion-item {
+    h3 {
+      font-weight: 700;
+      font-size: 18px;}
+    ion-avatar {
+      width: 50px;
+      height: 50px;
+      --border-radius: 50%;
+    }
+  }
+}
+
+mat-sidenav {
+  background-color: rgb(255, 127, 8); /* Usa el color de fondo deseado */
+}
+
+
+
+
+
+.custom-button {
+  --background: rgb(255, 208, 0);
+  --color: rgb(0, 0, 0); 
+  --border-radius: 30px;
+  --padding: 12px;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-avatar img {
+  margin-top: 14px;
+  width: 50px;
+  height: 50px;
+}
+
+ion-label {
+  margin-top: 20px;
+  text-align: left;
+  margin: 5 auto;
+
+}
+
+.sidenav-content {
+  padding: 16px;
+  color: rgb(51, 255, 0);
+  background: rgb(255, 127, 8);  
+  color: rgb(255, 255, 255); 
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+h {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  padding-bottom: 16px;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 16px;
+}
+
+.item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details h3 {
+  font-size: 1.2em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-new {
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.item-options {
+  margin: 8px 0;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control ion-button {
+  padding: 4px 8px;
+}
+
+.quantity-control p {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.subtotal {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.stock-alert {
+  color: #e53935;
+  font-size: 0.85em;
+}
+
+ion-button[fill="clear"] {
+  margin-left: 8px;
+  color: #e53935;
+}
+.custom-button2 {
+  --background: rgba(49, 49, 49, 0.8); 
+  --color: white; 
+  --border-radius: 12px; 
+  --padding: 12px;
+}
+
+.checkout-button{
+  --background: #000000; 
+  --color: #ffffff;
+  --border-radius: 12px; 
+  --padding: 12px;
+}
+.custom-button3 {
+  text-align: right;
+}
+.custom-toast, .success-toast {
+  --background: rgba(49, 49, 49, 0.9) !important;
+  color: white !important;
+  font-size: 0.8rem !important;
+  max-width: 300px !important; /* Ajusta el ancho máximo */
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  text-align: center;
+  margin: 0 auto !important; /* Centra horizontalmente */
+  left: 0; /* Asegura que esté alineado al centro */
+  right: 0; /* Asegura que esté alineado al centro */
+}
+.alert-error .alert-wrapper {
+  background-color: rgb(0, 0, 0); /* Fondo oscuro o personalizable */
+  border-radius: 10px; /* Borde redondeado para la alerta */
+}
+
+.alert-error,.alert-success {
+  --background: #000000ee;
+  border-radius: 20px;
+  ion-text-align: center;
+  max-width: auto !important;
+  margin: 0 auto !important;
+}
+.alert-error .alert-title {
+  color: #ffbc3f; /* Color de título */
+}
+.alert-error .alert-message {
+  font-size: 16px;
+  color: #ffffff; 
+}
+
+.alert-error .alert-button {
+  color: #ffbc3f;
+}
+.alert-success {
+  --background: #000000ee;
+  border-radius: 20px;
+  ion-text-align: center;
+  max-width: auto !important;
+  margin: 0 auto !important;
+}
+.alert-success .alert-title {
+  color: #ffbc3f; /* Color de título */
+}
+
+.alert-success .alert-message {
+  font-size: 16px;
+  color: #ffffff; 
+}
+
+
+.alert-success .alert-button {
+  color: #ffbc3f;
+}
+/* Clase personalizada para los botones de alerta */
+.custom-alert-button {
+  --color: rgb(255, 127, 8);  /* Color de texto */
+  --background: transparent;   /* Fondo transparente */
+  --border-radius: 8px;        /* Bordes redondeados */
+  font-weight: bold;           /* Fuente en negrita */
+}
+
+/* Clase para la alerta de logout (si se necesita un estilo específico) */
+.alert-logout .alert-wrapper {
+  background-color: rgb(0, 0, 0); /* Fondo oscuro o personalizable */
+  border-radius: 10px; /* Borde redondeado para la alerta */
+}
+.alert-success .alert-wrapper {
+  background-color: rgb(0, 0, 0); /* Fondo oscuro o personalizable */
+  border-radius: 10px; /* Borde redondeado para la alerta */
+}
+
+.alert-logout .alert-title {
+  color: #ffbc3f; /* Color de título */
+}
+
+.alert-logout .alert-message {
+  color: white; /* Color del mensaje */
+}
+.alert-logout .alert-button {
+  color: #ffbc3f;
+}
+
+
+:root {
+  @include mat.all-component-themes($app-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($app-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($app-theme);
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
