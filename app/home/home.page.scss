@@ -1,0 +1,331 @@
+ion-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-btn {
+  margin-left: 4px;
+}
+
+
+.app-logo-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.app-logo {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.app-logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+
+mat-sidenav {
+  background-color: rgb(255, 169, 8);
+}
+
+.sidenav-content {
+  padding: 16px;
+  background: rgb(255, 169, 8);
+  color: #fff;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 16px;
+  border-radius: 8px;
+  }
+
+
+.item-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details h3 {
+  font-size: 1.2em;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-new {
+  color: #fff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control ion-button {
+  padding: 4px 8px;
+}
+
+.quantity-control p {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+.subtotal {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 8px;
+}
+
+.checkout-button {
+  --background: #000;
+  --color: #fff;
+  --border-radius: 12px;
+  --padding: 12px;
+}
+
+
+ion-content {
+  --background: linear-gradient(90deg, rgb(255, 127, 8) 0%, rgb(255, 213, 24) 35%, rgb(255, 127, 8) 100%);
+}
+
+ion-card {
+  width: var(--card-width-small);
+  max-width: 400px;
+  height: auto;
+  margin: 10px;
+  border-radius: 14px;
+  padding: 0;
+  background: rgba(56, 56, 56, 0.863);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  box-shadow: none;
+  overflow: hidden;
+}
+ion-card-header {
+  padding: 0; 
+}
+
+ion-card img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 14px; 
+  object-fit: cover; 
+  margin-top: -16px; 
+  position: relative;
+}
+ion-card-title,
+ion-card-subtitle {
+  font-size: 1rem; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  margin: 0;
+}
+
+ion-card-content {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .custom-button-2 {
+    --border-radius: 50px; 
+    --min-width: 200px; 
+    --padding-start: 16px; 
+    --padding-end: 16px;
+    --height: 50px; 
+    --background: #ff9c08; 
+    --color: #ffffff;
+    font-size: 16px; 
+    text-transform: uppercase; 
+  }
+  
+}
+.custom-button {
+  --background: rgb(255, 208, 0);
+  --color: rgb(0, 0, 0);
+  --border-radius: 30px;
+  --padding: 8px;
+  font-size: 0.9rem; 
+}
+
+:root {
+  --card-width-small: 90%;
+  --card-width-medium: 45%;
+  --card-width-large: 30%;
+}
+
+@media (min-width: 768px) {
+  ion-card {
+    width: var(--card-width-medium);
+  }
+}
+
+@media (min-width: 1024px) {
+  ion-card {
+    width: var(--card-width-large);
+  }
+}
+
+ion-grid.no-padding {
+  --ion-grid-column-padding: 5px;
+  --ion-grid-row-padding: 5px;
+}
+
+.custom-toast,
+.success-toast {
+  --background: rgba(49, 49, 49, 0.9);
+  color: white;
+  font-size: 0.8rem;
+  max-width: 300px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto;
+}
+.custom-searchbar {
+  width: 80%;
+  margin: 0 auto; 
+}
+.searchbar-container {
+  display: flex;
+  justify-content: center; 
+  margin: 20px 0; 
+}
+
+.searchbar-container ion-searchbar {
+  width: 80%; 
+  max-width: 600px;
+  border-radius: 20px; 
+  --background: #252525b4; 
+}
+ion-content {
+  --background: linear-gradient(90deg, rgb(255, 127, 8) 0%, rgb(255, 213, 24) 35%, rgb(255, 127, 8) 100%);
+  color: #fff;
+}
+
+.detalle-imagen {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.detalle-precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.detalle-descripcion {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.custom-button {
+  --background: rgb(255, 208, 0);
+  --color: rgb(0, 0, 0);
+  --border-radius: 30px;
+}
+
+ion-modal {
+  --width: 80%; 
+  --height: 80%;
+  --max-height: 90%; 
+  --border-radius: 15px; 
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  --margin: auto;
+  --top: 10%; 
+  background: rgba(0, 0, 0, 0.514); 
+}
+.modal-content {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  border-radius: 0px;
+  margin: 0 auto;
+}
+
+.detalle-imagen {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.detalle-info {
+  margin-bottom: 16px;
+  text-align: left;
+  width: 100%;
+  color: #b98e4c;
+}
+
+.detalle-info h1 {
+  font-size: 1.5rem;
+  color: #ff9c08;
+}
+
+.detalle-info p {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.detalle-ingredientes,
+.detalle-receta {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.detalle-ingredientes h2,
+.detalle-receta h2 {
+  font-size: 1.2rem;
+  color: #ff9c08;
+  margin-bottom: 8px;
+}
+
+.detalle-ingredientes p,
+.detalle-receta p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.custom-button {
+  --background: #ff9c08;
+  --color: #000;
+  --border-radius: 14px;
+  --padding: 12px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+}

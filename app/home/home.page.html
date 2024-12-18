@@ -1,0 +1,139 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+<ion-buttons slot="start">
+  <ion-button class="profile-btn" (click)="mostrarMenu($event)">
+    <ion-avatar> 
+      <img src="assets/img/profile.jpg" alt="Profile Image">
+    </ion-avatar>
+  </ion-button>
+</ion-buttons>
+<ion-popover
+  [isOpen]="menuAbierto"
+  [event]="menuEvento"
+  (didDismiss)="cerrarMenu()"
+>
+  <ng-template>
+    <ion-list>
+        <ion-item button (click)="irAMiPerfil()">
+        <ion-icon slot="start" name="person-outline"></ion-icon>
+        Mi perfil
+      </ion-item>
+      <ion-item button (click)="cerrarSesion()">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        Cerrar sesión
+      </ion-item>
+    </ion-list>
+  </ng-template>
+</ion-popover>
+    <div class="app-logo-container">
+      <ion-avatar class="app-logo">
+        <img src="assets/img/appicon.png" alt="App Icon">
+      </ion-avatar>
+    </div>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleSidenav()" class="profile-btn">
+        <ion-avatar>
+          <img src="assets/img/cart.png" alt="Cart Icon">
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<mat-sidenav-container style="height: 100%;">
+  <mat-sidenav #sidenav mode="over" position="end">
+    <div class="sidenav-content">
+      <div *ngFor="let item of carrito" class="cart-item">
+        <img [src]="item.strMealThumb" alt="{{ item.strMeal }}" />
+        <div class="item-details">
+          <h3>{{ item.strMeal }}</h3>
+          <p class="price-new">{{ item.price | currency:'CLP' }}</p>
+          <div class="quantity-control">
+            <ion-button class="custom-button2" (click)="reducirCantidad(item)">-</ion-button>
+            <p>{{ item.cantidad }}</p>
+            <ion-button class="custom-button2" (click)="incrementarCantidad(item)">+</ion-button>
+          </div>
+        </div>
+        <ion-button fill="clear" color="danger" (click)="removerDelCarrito(item)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <div class="cart-summary" *ngIf="carrito && carrito.length > 0">
+        <p class="subtotal">Subtotal: {{ calcularSubtotal() | currency:'CLP' }}</p>
+        <div class="checkout-button-container">
+          <ion-button expand="block" class="checkout-button" routerLink="/pago">
+            Ir a Pagar
+          </ion-button>
+
+        </div>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ion-content>
+      <div class="searchbar-container">
+        <ion-searchbar placeholder="Buscar" (ionInput)="filtrarProductos($event)" debounce="200">
+        </ion-searchbar>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col 
+            size="4" 
+            size-md="8" 
+            size-lg="2" 
+            *ngFor="let producto of productosFiltrados | slice:0:24">
+            <ion-card (click)="abrirDetalles(producto)">
+              <ion-card-header>
+                <img class="files" [src]="producto.strMealThumb" alt="{{ producto.strMeal }}">
+              </ion-card-header>
+              <ion-card-content>
+                <ion-card-title>{{ producto.strMeal }}</ion-card-title>
+                <ion-card-subtitle>{{ producto.price | currency:'CLP' }}</ion-card-subtitle>
+                <ion-button class="custom-button-2" expand="full" (click)="agregarAlCarrito(producto); $event.stopPropagation();">
+                  <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ion-modal [isOpen]="modalAbierto" (didDismiss)="cerrarDetalles()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{ productoSeleccionado?.strMeal }}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="cerrarDetalles()">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <div class="modal-content">
+        <img [src]="productoSeleccionado?.strMealThumb" alt="{{ productoSeleccionado?.strMeal }}" class="detalle-imagen" />
+        <div class="detalle-info">
+          <h1>{{ productoSeleccionado?.strMeal }}</h1>
+          <p><strong>Categoría:</strong> {{ productoSeleccionado?.strCategory }}</p>
+          <p><strong>Área:</strong> {{ productoSeleccionado?.strArea }}</p>
+        </div>
+        <div class="detalle-ingredientes">
+          <h2>Ingredientes</h2>
+          <p>{{ productoSeleccionado?.ingredientes.join(', ') }}</p>
+        </div>
+        <div class="detalle-receta">
+          <h2>Receta</h2>
+          <p>{{ productoSeleccionado?.strInstructions }}</p>
+        </div>
+        <ion-button expand="block" class="custom-button" (click)="agregarAlCarrito(productoSeleccionado)">
+          Agregar al carrito
+        </ion-button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

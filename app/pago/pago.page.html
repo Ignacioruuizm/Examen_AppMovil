@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Página de Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="payment-products">
+    <div class="payment-item" *ngFor="let item of carrito">
+      <img [src]="item.strMealThumb" alt="{{ item.strMeal }}">
+      <div class="payment-details">
+        <h3>{{ item.strMeal }}</h3>
+        <p class="price">{{ item.price | currency:'CLP' }}</p>
+                <div class="quantity-control">
+          <ion-button class="custom-button2" (click)="reducirCantidad(item)">-</ion-button>
+          <p>{{ item.cantidad }}</p>
+          <ion-button class="custom-button2" (click)="incrementarCantidad(item)">+</ion-button>
+        </div>
+      </div>
+      <ion-button fill="clear" color="danger" (click)="removerDelCarrito(item)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="payment-summary">
+    <p class="subtotal">Total: {{ calcularTotal() | currency:'CLP' }}</p>
+<ion-button expand="block" class="checkout-button" (click)="simularPago()">
+  Pago
+</ion-button>
+
+  </div>
+</ion-content>
