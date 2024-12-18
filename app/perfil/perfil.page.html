@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="profile-container">
+    <div class="profile-image">
+      <img [src]="user.imagen" alt="Imagen de perfil" />
+    </div>
+    <ion-card class="profile-card">
+      <ion-card-header>
+        <ion-card-title>{{ user.nombre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Edad:</strong> {{ user.edad }}</p>
+        <p><strong>Teléfono:</strong> {{ user.telefono }}</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-button expand="block" class="edit-button" (click)="editarPerfil()">
+      Editar Perfil
+    </ion-button>
+  </div>
+</ion-content>
