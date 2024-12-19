@@ -11,8 +11,7 @@ SnackDash es una aplicación de comida rápida desarrollada principalemte en Ion
 ![Captura de pantalla 2024-12-19 013947](https://github.com/user-attachments/assets/dd898239-4a68-481e-9fdb-6b5e5bb1ec74)
 
 - **API**: Conexión con el backend para obetner comidas
-![Captura de pantalla 2024-12-19 014317](https://github.com/user-attachments/assets/7ba7bf1c-83dc-4d22-8c0c-42bc1315c613)
-![Captura de pantalla 2024-12-19 013535](https://github.com/user-attachments/assets/90871543-cfcc-4297-bba2-215c38c11e62)
+![Captura de pantalla 2024-12-19 014317](https://github.com/user-attachments/assets/7ba7bf1c-83dc-4d22-8c0c-42bc1315c613)![Captura de pantalla 2024-12-19 013535](https://github.com/user-attachments/assets/90871543-cfcc-4297-bba2-215c38c11e62)
 
 - **Local Storage**: Persistencia de datos en el dispositivo del usuario.
 ![Captura de pantalla 2024-12-19 013855](https://github.com/user-attachments/assets/6ca282ef-325b-4960-9439-354821ffcb48)
@@ -29,8 +28,7 @@ SnackDash es una aplicación de comida rápida desarrollada principalemte en Ion
 ![Captura de pantalla 2024-12-19 013824](https://github.com/user-attachments/assets/f4745376-1e6c-4813-8d65-4eb27af49f22)
 
 - **PLugins**: especificamente para notificaciones push con google firebase
-![Captura de pantalla 2024-12-19 013913](https://github.com/user-attachments/assets/de2edf3b-cbae-4e3e-a412-12f55070830e)
-![Captura de pantalla 2024-12-19 013629](https://github.com/user-attachments/assets/3ad34fe9-5d49-48ae-9bdb-a93ac56f5bd8)
+![Captura de pantalla 2024-12-19 013913](https://github.com/user-attachments/assets/de2edf3b-cbae-4e3e-a412-12f55070830e)![Captura de pantalla 2024-12-19 013629](https://github.com/user-attachments/assets/3ad34fe9-5d49-48ae-9bdb-a93ac56f5bd8)
 
 - **Android Studio**: generacion del apk y testing del funcionamineto de la aplicaion.
 ![Captura de pantalla 2024-12-19 013315](https://github.com/user-attachments/assets/cb717701-bcce-4c90-a1c1-38cd212a2c9b)
