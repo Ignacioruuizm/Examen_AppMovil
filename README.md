@@ -6,10 +6,6 @@ SnackDash es una aplicación de comida rápida desarrollada principalemte en Ion
 - **Ionic Framework**: princialmente para la interfaz
 ![Captura de pantalla 2024-12-19 013330](https://github.com/user-attachments/assets/39e81590-c1d7-41c1-91ad-71abd458f882)
 ![Captura de pantalla 2024-12-19 013535](https://github.com/user-attachments/assets/ad91e27a-301c-4917-b1fb-b0d50949ca89)
-![Captura de pantalla 2024-12-19 013554](https://github.com/user-attachments/assets/2589bba9-f77c-4037-be51-0578eabcd997)
-![Captura de pantalla 2024-12-19 013610](https://github.com/user-attachments/assets/f5992b90-06b0-4682-b6eb-863360428f95)
-![Captura de pantalla 2024-12-19 013619](https://github.com/user-attachments/assets/670d364e-6278-4400-8fa9-956c41d8c6d9)
-![Captura de pantalla 2024-12-19 013645](https://github.com/user-attachments/assets/e3d7ed86-bf1e-4ad7-8b58-cab7bd485a34)
 
 - **Angular**: Para la lógica de la aplicación ademas de integrar librerias como angular material.
 ![Captura de pantalla 2024-12-19 013947](https://github.com/user-attachments/assets/dd898239-4a68-481e-9fdb-6b5e5bb1ec74)
